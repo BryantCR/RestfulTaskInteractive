@@ -20,12 +20,8 @@ export class HttpService {
       });
   }
 
-  /*fetchTasksByName(title : String): void{
-    this._http.get( "http://localhost:8080/tasks/"+ title )
-      .subscribe( (data:any) => {
-        this.task = data;
-        console.log("Find by Name", this.task );
-      });
-  }*/
+  fetchTasksByName(title : String){
+    return this._http.get( "http://localhost:8080/tasks/"+ title )
+  }
 
 }
